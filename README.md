@@ -1,121 +1,69 @@
-# RETO-4  
-## Sistema de Restaurante  
-Descripción  
+# RETO 4  
+# Sistema de Restaurante y Geometría (RETO-4)
+---
 
-Este programa simula un sistema de pedidos en un restaurante donde:  
+## 1. Sistema de Restaurante
 
-Se pueden agregar productos a una orden  
-Se calcula el subtotal y total con descuentos  
-Se procesan pagos con tarjeta o efectivo  
-Se usan getters y setters para modificar atributos  
-## Estructura  
-Clase base: MenuItem  
+Simulación de un sistema de gestión de pedidos que permite administrar menús, aplicar lógica de descuentos y procesar diferentes métodos de pago.
 
-Representa cualquier producto del menú:  
+### Estructura de Clases
 
-## Atributos:  
+#### Clase Base: MenuItem
+Representa la unidad mínima del menú.
+* **Atributos:** `_name` (Nombre), `_price` (Precio).
+* **Encapsulamiento:** Implementación de *getters* y *setters* para la modificación segura de atributos.
+* **Subclases Especializadas:**
+    * **Beverage:** Incluye atributo `size` (Tamaño).
+    * **Appetizer:** Incluye atributo `shareable` (Para compartir).
+    * **MainCourse:** Incluye atributo `calories` (Calorías).
 
-_name  
-_price  
+#### Clase de Gestión: Order
+Encargada de la lógica y procesamiento de la cuenta del cliente.
+* `add_item()`: Registro de productos en la orden.
+* `calculate_subtotal()`: Sumatoria base de los precios.
+* `calculate_total()`: Aplicación de descuentos jerárquicos.
 
-## Métodos:  
+### Lógica de Descuentos
+Los descuentos se evalúan bajo los siguientes criterios acumulativos:
+1. **12%** por la compra de 2 o más platos principales.
+2. **20%** si la orden supera los 5 productos totales.
+3. **10%** si la orden supera los 3 productos totales.
+4. **5% Extra** si el subtotal final es mayor a 40.000.
 
-get_name(), get_price()  
-set_name(), set_price()  
-calculate_total()  
+### Sistema de Pago
+Implementación de la clase `Payment`:
+* **Card:** Validación y visualización de los últimos 4 dígitos.
+* **Cash:** Gestión de cambio y validación de fondos.
 
-## Subclases  
-Beverage → tamaño (size)  
-Appetizer → compartible (shareable)  
-MainCourse → calorías (calories)  
+---
 
-Cada una usa getters/setters propios.  
+## 2. Motor Geométrico
 
-## Clase Order  
+Modelado y análisis de figuras geométricas en un plano cartesiano.
 
-Maneja los pedidos:  
+### Componentes Fundamentales
 
-add_item() → agrega productos  
-show_order() → muestra productos  
-calculate_subtotal() → suma precios  
-calculate_total() → aplica descuentos  
-## Descuentos aplicados  
+| Clase | Función Principal |
+| :--- | :--- |
+| **Point** | Representa coordenadas (x, y) y calcula distancias entre puntos. |
+| **Line** | Define un segmento entre dos puntos y calcula su longitud. |
+| **Shape** | Clase base que gestiona vértices y aristas para las figuras geométricas. |
 
-Los descuentos se aplican en este orden:  
+### Capacidades de Cálculo
+* **Perímetros y Áreas:** Implementación de fórmulas específicas por figura.
+* **Análisis de Triángulos:** Uso de la **Fórmula de Herón** para áreas y la **Ley de Cosenos** para ángulos internos.
+* **Validación de Regularidad:** Comprobación de igualdad de lados y ángulos.
 
-12% si hay 2 o más platos principales  
-20% si hay más de 5 productos  
-10% si hay más de 3 productos  
-5% extra si el subtotal es mayor a 40  
+### Figuras Soportadas
+#### Rectángulos y Cuadrados
+* **Rectangle:** Define una figura de cuatro lados basada en coordenadas de puntos. Implementa el cálculo de área ($base \times altura$) y perímetro.
+* **Square:** Es una extensión (subclase) de Rectangle. Su función principal es restringir la figura para que todos los lados sean iguales, asegurando la integridad geométrica del cuadrado.
 
-## Sistema de Pago  
-### Clase base: Payment  
+#### Triángulos
+Clasificación automática según sus propiedades:
+* **Equilateral:** Todos los lados iguales.
+* **Isosceles:** Al menos dos lados iguales.
+* **Scalene:** Todos los lados diferentes.
+* **RightTriangle:** Validación mediante el Teorema de Pitágoras.
 
-## Subclases:  
-
-Card → muestra últimos 4 dígitos  
-Cash → calcula cambio o valida dinero insuficiente  
-
-# Ejercicio de Clase  
-Descripción  
-
-Este programa modela figuras geométricas en el plano cartesiano.  
-
-## Permite calcular:  
-
-Distancias  
-Perímetros  
-Áreas  
-Ángulos internos  
-Verificar si una figura es regular  
-
-## Estructura  
-## Clase Point  
-
-Representa un punto (x, y)  
-
-## Métodos:  
-
-distance_to() → distancia entre puntos  
-getters/setters  
-
-## Clase Line  
-
-Representa un segmento entre dos puntos  
-
-length() → calcula longitud  
-
-## Clase base Shape  
-
-Atributos:  
-
-vértices (Point)  
-lados (Line)  
-
-## Métodos:  
-
-compute_perimeter()  
-compute_area()  
-inner_angles()  
-is_regular()  
-
-## Figuras implementadas  
-### Rectangle  
-Área = base × altura  
-Ángulos: 90°  
-### Square (hereda de Rectangle)  
-Valida que todos los lados sean iguales  
-Es una figura regular  
-### Triangle  
-Área: Fórmula de Herón  
-Ángulos: Ley de cosenos  
-
-## Métodos:
-
-get_a(), get_b(), get_c()
-
-## Triángulos especiales  
-Equilateral → todos iguales  
-Isosceles → al menos dos iguales  
-Scalene → todos diferentes  
-RightTriangle → cumple Pitágoras  
+---
