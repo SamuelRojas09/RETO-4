@@ -23,7 +23,8 @@ _price
 get_name(), get_price()  
 set_name(), set_price()  
 calculate_total()  
-Subclases  
+
+## Subclases  
 Beverage → tamaño (size)  
 Appetizer → compartible (shareable)  
 MainCourse → calorías (calories)  
