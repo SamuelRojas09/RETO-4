@@ -15,8 +15,8 @@ Representa cualquier producto del menú:
 
 ## Atributos:  
 
-name  
-price  
+_name  
+_price  
 
 ## Métodos:  
 
