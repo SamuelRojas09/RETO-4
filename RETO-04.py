@@ -239,7 +239,7 @@ if __name__ == "__main__":
     payment2 = Cash(50)
     payment2.pay(total3)
 
-    # Pago en efectivo insuficiente
+    # Pago en efectivo
     payment3 = Cash(100)
     payment3.pay(total3)
     
