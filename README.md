@@ -112,8 +112,8 @@ Es una figura regular
 
 get_a(), get_b(), get_c()
 
-## Triángulos especiales
-Equilateral → todos iguales
-Isosceles → al menos dos iguales
-Scalene → todos diferentes
-RightTriangle → cumple Pitágoras
+## Triángulos especiales  
+Equilateral → todos iguales  
+Isosceles → al menos dos iguales  
+Scalene → todos diferentes  
+RightTriangle → cumple Pitágoras  
