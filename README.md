@@ -2,111 +2,117 @@
 ## Sistema de Restaurante  
 Descripción  
 
-Este programa simula un sistema de pedidos en un restaurante donde:
+Este programa simula un sistema de pedidos en un restaurante donde:  
 
-Se pueden agregar productos a una orden
-Se calcula el subtotal y total con descuentos
-Se procesan pagos con tarjeta o efectivo
-Se usan getters y setters para modificar atributos
-Estructura
-Clase base: MenuItem
+Se pueden agregar productos a una orden  
+Se calcula el subtotal y total con descuentos  
+Se procesan pagos con tarjeta o efectivo  
+Se usan getters y setters para modificar atributos  
+## Estructura  
+Clase base: MenuItem  
 
-Representa cualquier producto del menú:
+Representa cualquier producto del menú:  
 
-Atributos:
+## Atributos:  
 
-name
-price
+name  
+price  
 
-Métodos:
+## Métodos:  
 
-get_name(), get_price()
-set_name(), set_price()
-calculate_total()
-Subclases
-Beverage → tamaño (size)
-Appetizer → compartible (shareable)
-MainCourse → calorías (calories)
+get_name(), get_price()  
+set_name(), set_price()  
+calculate_total()  
+Subclases  
+Beverage → tamaño (size)  
+Appetizer → compartible (shareable)  
+MainCourse → calorías (calories)  
 
-Cada una usa getters/setters propios.
+Cada una usa getters/setters propios.  
 
-Clase Order
+## Clase Order  
 
-Maneja los pedidos:
+Maneja los pedidos:  
 
-add_item() → agrega productos
-show_order() → muestra productos
-calculate_subtotal() → suma precios
-calculate_total() → aplica descuentos
-Descuentos aplicados
+add_item() → agrega productos  
+show_order() → muestra productos  
+calculate_subtotal() → suma precios  
+calculate_total() → aplica descuentos  
+## Descuentos aplicados  
 
-Los descuentos se aplican en este orden:
+Los descuentos se aplican en este orden:  
 
-12% si hay 2 o más platos principales
-20% si hay más de 5 productos
-10% si hay más de 3 productos
-5% extra si el subtotal es mayor a 40
-Sistema de Pago
-Clase base: Payment
+12% si hay 2 o más platos principales  
+20% si hay más de 5 productos  
+10% si hay más de 3 productos  
+5% extra si el subtotal es mayor a 40  
+Sistema de Pago  
+Clase base: Payment  
 
-Subclases:
+## Subclases:  
 
-Card → muestra últimos 4 dígitos
-Cash → calcula cambio o valida dinero insuficiente
-Ejercicio de Clase
-Descripción
+Card → muestra últimos 4 dígitos  
+Cash → calcula cambio o valida dinero insuficiente  
 
-Este programa modela figuras geométricas en el plano cartesiano.
+# Ejercicio de Clase  
+Descripción  
 
-Permite calcular:
+Este programa modela figuras geométricas en el plano cartesiano.  
 
-Distancias
-Perímetros
-Áreas
-Ángulos internos
-Verificar si una figura es regular
-Estructura
-Clase Point
+## Permite calcular:  
 
-Representa un punto (x, y)
+Distancias  
+Perímetros  
+Áreas  
+Ángulos internos  
+Verificar si una figura es regular  
 
-Métodos:
+## Estructura  
+## Clase Point  
 
-distance_to() → distancia entre puntos
-getters/setters
-Clase Line
+Representa un punto (x, y)  
 
-Representa un segmento entre dos puntos
+## Métodos:  
 
-length() → calcula longitud
-Clase base Shape
+distance_to() → distancia entre puntos  
+getters/setters  
 
-Atributos:
+## Clase Line  
 
-vértices (Point)
-lados (Line)
+Representa un segmento entre dos puntos  
 
-Métodos:
+length() → calcula longitud  
 
-compute_perimeter()
-compute_area()
-inner_angles()
-is_regular()
-Figuras implementadas
-Rectangle
-Área = base × altura
-Ángulos: 90°
-Square (hereda de Rectangle)
-Valida que todos los lados sean iguales
-Es una figura regular
-Triangle
-Área: Fórmula de Herón
-Ángulos: Ley de cosenos
+## Clase base Shape  
 
-Métodos:
+Atributos:  
+
+vértices (Point)  
+lados (Line)  
+
+## Métodos:  
+
+compute_perimeter()  
+compute_area()  
+inner_angles()  
+is_regular()  
+
+## Figuras implementadas  
+### Rectangle  
+Área = base × altura  
+Ángulos: 90°  
+### Square (hereda de Rectangle)  
+Valida que todos los lados sean iguales  
+Es una figura regular  
+### Triangle  
+Área: Fórmula de Herón  
+Ángulos: Ley de cosenos  
+
+## Métodos:
 
 get_a(), get_b(), get_c()
-Triángulos especiales
+
+## Triángulos especiales
 Equilateral → todos iguales
 Isosceles → al menos dos iguales
 Scalene → todos diferentes
