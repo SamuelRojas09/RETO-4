@@ -47,8 +47,9 @@ Los descuentos se aplican en este orden:
 20% si hay más de 5 productos  
 10% si hay más de 3 productos  
 5% extra si el subtotal es mayor a 40  
-Sistema de Pago  
-Clase base: Payment  
+
+## Sistema de Pago  
+### Clase base: Payment  
 
 ## Subclases:  
 
