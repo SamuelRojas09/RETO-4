@@ -1,6 +1,6 @@
-RETO-4
-Sistema de Restaurante
-Descripción
+# RETO-4  
+## Sistema de Restaurante  
+Descripción  
 
 Este programa simula un sistema de pedidos en un restaurante donde:
 
