@@ -1,7 +1,7 @@
 from typing import List
 
 
-# ===================== CLASE BASE =====================
+# ===================== BASE CLASS =====================
 # Representa cualquier producto del menú
 class MenuItem:
     def __init__(self, name: str, price: float) -> None:
